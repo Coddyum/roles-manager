@@ -1,32 +1,15 @@
 import { useState } from "react";
-import axios from "axios";
 import RoleList from "../roleList/RoleList";
 
 export default function CreateNewRole() {
     const [name, setName] = useState("");
-    const [color, setColor] = useState("#000000"); // Valeur par défaut valide
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            const response = await axios.post("http://localhost:5001/roles", {
-                name,
-                color,
-            });
-            console.log("Role créé :", response.data);
-            setName("");
-            setColor("#000000"); // Réinitialiser la couleur à une valeur valide
-        } catch (error) {
-            console.error("Erreur lors de la création du rôle", error);
-        }
-    };
+    const [color, setColor] = useState("#000000");
 
     return (
         <>
-            <div>
+            <div className="newRole">
                 <h1>Create New Role</h1>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <label>
                         Name :
                         <input
