@@ -1,9 +1,10 @@
-import axios from "axios";
 import { useState } from "react";
+import axios from "axios";
+import RoleList from "../roleList/RoleList";
 
 export default function CreateNewRole() {
     const [name, setName] = useState("");
-    const [color, setColor] = useState("");
+    const [color, setColor] = useState("#000000"); // Valeur par défaut valide
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,7 +16,7 @@ export default function CreateNewRole() {
             });
             console.log("Role créé :", response.data);
             setName("");
-            setColor("");
+            setColor("#000000"); // Réinitialiser la couleur à une valeur valide
         } catch (error) {
             console.error("Erreur lors de la création du rôle", error);
         }
@@ -30,7 +31,7 @@ export default function CreateNewRole() {
                         Name :
                         <input
                             type="text"
-                            value={name} // Correction de 'requiredvalue' en 'value'
+                            value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
                         />
@@ -49,6 +50,7 @@ export default function CreateNewRole() {
                     <button type="submit">Add New Role</button>
                 </form>
             </div>
+            <RoleList />
         </>
     );
 }

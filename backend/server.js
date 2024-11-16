@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors"); // Importation de CORS
 
 const app = express();
-app.use(cors()); // Middleware CORS global
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use(express.json()); // Permet de parser les requêtes en JSON
 
@@ -26,9 +26,9 @@ app.post("/roles", async (req, res) => {
         const { name, color } = req.body;
         const newRole = new Role({ name, color });
         await newRole.save();
-        res.status(201).send(newRole);
+        res.status(201).json(newRole);
     } catch (error) {
-        res.status(500).send({ error: "Erreur lors de la création du rôle." });
+        res.status(500).json({ error: "Error creating role" });
     }
 });
 
