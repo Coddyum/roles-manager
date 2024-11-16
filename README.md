@@ -1,10 +1,7 @@
 ---
 
-# Role Management System
-
-## Description
-
-Un système de gestion des rôles simple développé avec **React** pour le frontend et **Express** avec **SQLite** pour le backend. Ce projet permet de créer des rôles, de les afficher dans une liste, et d'assigner des couleurs à chaque rôle. L'objectif est d'ajouter un rôle management similaire à un système de gestion des rôles comme celui de **Discord**.
+name: Role Management System
+description: "Un système de gestion des rôles simple développé avec React et Express"
 
 Le projet est divisé en deux parties :
 
