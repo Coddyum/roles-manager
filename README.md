@@ -1,5 +1,4 @@
 ---
-
 name: Role Management System
 description: "Un système de gestion des rôles simple développé avec React et Express"
 
@@ -149,3 +148,5 @@ Ce projet est sous la licence MIT - voir le fichier [LICENSE](LICENSE) pour plus
 -   **Nom du projet** et lien vers le repository GitHub.
 -   **Visualisation des données** : Ajoute un section sur comment voir les rôles dans la base de données, si tu utilises un visualiseur SQLite comme DB Browser.
 -   **Future fonctionnalités** : Si tu veux, tu peux lister les fonctionnalités à venir que tu souhaites ajouter (par exemple, gestion des utilisateurs, assignation de rôles, etc.).
+
+---
