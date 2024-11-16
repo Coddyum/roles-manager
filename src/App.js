@@ -1,5 +1,13 @@
+import RoleList from "./roleList/RoleList";
+import UserList from "./userList/UserList";
+
 function App() {
-    return <h1>Hello</h1>;
+    return (
+        <>
+            <UserList />
+            <RoleList />
+        </>
+    );
 }
 
 export default App;

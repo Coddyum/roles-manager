@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "pseudo": "alicej",
+        "bio": "Passionnée de photographie et de voyages.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "pseudo": "bob_s",
+        "bio": "Développeur web et amateur de randonnée.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Charlie Brown",
+        "pseudo": "charlieb",
+        "bio": "Designer graphique et fan de musique indie.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Diana Prince",
+        "pseudo": "diana_p",
+        "bio": "Écrivaine et aventurière dans l'âme.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Ethan Hunt",
+        "pseudo": "ethan_h",
+        "bio": "Ingénieur en informatique et joueur de tennis.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Fiona Lee",
+        "pseudo": "fiona_l",
+        "bio": "Chef cuisinière et amatrice de yoga.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "George Martin",
+        "pseudo": "george_m",
+        "bio": "Professeur de littérature et collectionneur de livres.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Hannah Clark",
+        "pseudo": "hannah_c",
+        "bio": "Artiste peintre et passionnée de jardinage.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Ian Davis",
+        "pseudo": "ian_d",
+        "bio": "Architecte et amateur de voitures anciennes.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "Jane Doe",
+        "pseudo": "jane_d",
+        "bio": "Infirmière et bénévole dans une association.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Kevin White",
+        "pseudo": "kevin_w",
+        "bio": "Entrepreneur et passionné de technologie.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Linda Green",
+        "pseudo": "linda_g",
+        "bio": "Avocate et amatrice de théâtre.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "Michael Brown",
+        "pseudo": "michael_b",
+        "bio": "Ingénieur civil et joueur de football.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "Nina Black",
+        "pseudo": "nina_b",
+        "bio": "Journaliste et passionnée de cinéma.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 15,
+        "name": "Oliver Stone",
+        "pseudo": "oliver_s",
+        "bio": "Réalisateur et amateur de photographie.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 16,
+        "name": "Patricia Adams",
+        "pseudo": "patricia_a",
+        "bio": "Designer de mode et passionnée de cuisine.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 17,
+        "name": "Quentin Miller",
+        "pseudo": "quentin_m",
+        "bio": "Écrivain et amateur de randonnée.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 18,
+        "name": "Rachel Turner",
+        "pseudo": "rachel_t",
+        "bio": "Professeur de mathématiques et joueuse de piano.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 19,
+        "name": "Samuel Harris",
+        "pseudo": "samuel_h",
+        "bio": "Ingénieur en aéronautique et passionné de ski.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 20,
+        "name": "Tina Wilson",
+        "pseudo": "tina_w",
+        "bio": "Infirmière et amatrice de danse.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 21,
+        "name": "Ursula King",
+        "pseudo": "ursula_k",
+        "bio": "Architecte et passionnée de voyages.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 22,
+        "name": "Victor Lee",
+        "pseudo": "victor_l",
+        "bio": "Développeur web et amateur de photographie.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 23,
+        "name": "Wendy Brown",
+        "pseudo": "wendy_b",
+        "bio": "Designer graphique et fan de musique indie.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 24,
+        "name": "Xavier Smith",
+        "pseudo": "xavier_s",
+        "bio": "Écrivain et aventurier dans l'âme.",
+        "image": "./img/pp.jpeg"
+    },
+    {
+        "id": 25,
+        "name": "Yvonne Hunt",
+        "pseudo": "yvonne_h",
+        "bio": "Ingénieur en informatique et joueuse de tennis.",
+        "image": "./img/pp.jpeg"
+    }
+]
