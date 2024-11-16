@@ -22,7 +22,10 @@ const RoleList = () => {
             <h2>Liste des rôles</h2>
             <ul>
                 {roles.map((role) => (
-                    <li key={role._id} style={{ color: role.color }}>
+                    <li
+                        key={role.id}
+                        className="role-item"
+                        style={{ borderColor: role.color, color: role.color }}>
                         {role.name}
                     </li>
                 ))}
