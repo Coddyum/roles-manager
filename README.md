@@ -27,6 +27,6 @@ Avant de commencer, tu dois t'assurer que tu as installé les outils suivants :
 ### 1. Clone le repository
 
 ```bash
-git clone https://github.com/ton-utilisateur/role-management-system.git
-cd role-management-system
+git clone https://github.com/Coddyum/roles-manager.git
+cd role-manager
 ```
