@@ -12,6 +12,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #c2d5e3;
+    overflow: hidden;
 }
 
 .container {
@@ -24,7 +25,7 @@ body {
 
 .userList {
     display: flex;
-    width: 256px;
+    width: 356px;
     max-height: 920px;
     background-color: #fff;
     border-radius: 14px;
@@ -99,23 +100,54 @@ body {
     width: 24px;
     height: 24px;
     border: none;
-    background-color: rgb(172, 224, 240);
+    background-color: #c2d5e3;
     border-radius: 4px;
     font-size: 1.3rem;
     cursor: pointer;
 }
 
-.rolesList {
+.roleslist {
     width: 250px;
     height: fit-content;
     background-color: whitesmoke;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.208);
+    padding: 14px;
+    border-radius: 16px;
 }
 
 .newRole {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     width: 350px;
-    height: 250px;
+    height: fit-content;
     background-color: whitesmoke;
     padding: 14px;
     border-radius: 16px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.208);
+}
+
+.newRole input {
+    width: 40%;
+    border: 1px solid #c2d5e3;
+    border-radius: 4px;
+}
+
+.newRole form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.formInput {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newRole button {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: none;
+    background-color: #c2d5e3;
 }

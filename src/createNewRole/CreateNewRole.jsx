@@ -8,28 +8,23 @@ export default function CreateNewRole() {
     return (
         <>
             <div className="newRole">
-                <h1>Create New Role</h1>
+                <h2>Create New Role</h2>
                 <form>
-                    <label>
-                        Name :
+                    <div className="formInput">
                         <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
+                            placeholder="Role Name"
                         />
-                    </label>
-                    <br />
-                    <label>
-                        Color :
                         <input
                             type="color"
                             value={color}
                             onChange={(e) => setColor(e.target.value)}
                             required
                         />
-                    </label>
-                    <br />
+                    </div>
                     <button type="submit">Add New Role</button>
                 </form>
             </div>
