@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+Bien sûr ! Voici un modèle de **README.md** pour ton projet de gestion des rôles. Ce modèle peut être adapté pour expliquer le but du projet, comment l’installer, comment l’utiliser, et où tu en es dans le développement.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Role Management System
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Un système de gestion des rôles simple développé avec **React** pour le frontend et **Express** avec **SQLite** pour le backend. Ce projet permet de créer des rôles, de les afficher dans une liste, et d'assigner des couleurs à chaque rôle. L'objectif est d'ajouter un rôle management similaire à un système de gestion des rôles comme celui de **Discord**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Le projet est divisé en deux parties :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Frontend** : Développé en React.
+2. **Backend** : Utilise Express pour gérer les routes et SQLite pour stocker les rôles.
 
-### `npm test`
+## Fonctionnalités
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   **Créer un rôle** avec un nom et une couleur.
+-   **Afficher tous les rôles** créés dans une liste.
+-   **Base de données SQLite** pour stocker les informations des rôles.
+-   **API REST** pour interagir avec les rôles (GET, POST).
 
-### `npm run build`
+## Prérequis
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Avant de commencer, tu dois t'assurer que tu as installé les outils suivants :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   **Node.js** (Version 16 ou supérieure)
+-   **npm** (gestionnaire de paquets Node)
+-   **SQLite** (si tu veux visualiser ou interagir directement avec la base de données)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+### 1. Clone le repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/ton-utilisateur/role-management-system.git
+cd role-management-system
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Installer les dépendances backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Va dans le dossier du backend (par exemple, `server`) et installe les dépendances Node.js :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd server
+npm install
+```
 
-## Learn More
+### 3. Installer les dépendances frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Va dans le dossier du frontend (par exemple, `client`) et installe les dépendances React :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd client
+npm install
+```
 
-### Code Splitting
+### 4. Démarrer le backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Dans le dossier `server`, lance le serveur Express :
 
-### Analyzing the Bundle Size
+```bash
+cd server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Le backend sera accessible sur `http://localhost:5000`.
 
-### Making a Progressive Web App
+### 5. Démarrer le frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Dans le dossier `client`, lance l'application React :
 
-### Advanced Configuration
+```bash
+cd client
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+L'application frontend sera accessible sur `http://localhost:3000`.
 
-### Deployment
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 1. `POST /api/roles`
 
-### `npm run build` fails to minify
+Permet de créer un rôle. Les données doivent être envoyées au format JSON dans le corps de la requête.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Exemple de payload** :
+
+```json
+{
+    "name": "Admin",
+    "color": "#FF0000"
+}
+```
+
+**Réponse attendue** :
+
+```json
+{
+    "id": 1,
+    "name": "Admin",
+    "color": "#FF0000"
+}
+```
+
+### 2. `GET /api/roles`
+
+Permet de récupérer tous les rôles enregistrés.
+
+**Réponse attendue** :
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Admin",
+        "color": "#FF0000"
+    },
+    {
+        "id": 2,
+        "name": "User",
+        "color": "#00FF00"
+    }
+]
+```
+
+## Technologies utilisées
+
+-   **Frontend** : React, Axios
+-   **Backend** : Express, SQLite
+-   **Base de données** : SQLite
+-   **Outils de développement** : Node.js, npm
+
+## Contributions
+
+Les contributions sont les bienvenues ! Si tu souhaites ajouter des fonctionnalités ou corriger des bugs, n'hésite pas à ouvrir une **pull request**. Pour les petites corrections ou suggestions, tu peux aussi ouvrir une **issue**.
+
+### Guide pour contribuer :
+
+1. Fork ce repository.
+2. Crée une nouvelle branche (`git checkout -b ma-feature`).
+3. Fais tes modifications.
+4. Commit tes changements (`git commit -am 'Ajout de ma fonctionnalité'`).
+5. Pousse la branche (`git push origin ma-feature`).
+6. Crée une pull request.
+
+## License
+
+Ce projet est sous la licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+### Quelques petites touches supplémentaires à personnaliser :
+
+-   **Nom du projet** et lien vers le repository GitHub.
+-   **Visualisation des données** : Ajoute un section sur comment voir les rôles dans la base de données, si tu utilises un visualiseur SQLite comme DB Browser.
+-   **Future fonctionnalités** : Si tu veux, tu peux lister les fonctionnalités à venir que tu souhaites ajouter (par exemple, gestion des utilisateurs, assignation de rôles, etc.).
