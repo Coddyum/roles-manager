@@ -1,5 +1,3 @@
-Bien sûr ! Voici un modèle de **README.md** pour ton projet de gestion des rôles. Ce modèle peut être adapté pour expliquer le but du projet, comment l’installer, comment l’utiliser, et où tu en es dans le développement.
-
 ---
 
 # Role Management System
