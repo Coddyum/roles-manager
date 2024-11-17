@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import api from "../api";
 
 const RoleList = () => {
@@ -15,7 +16,17 @@ const RoleList = () => {
 
     useEffect(() => {
         fetchRoles();
-    });
+    }, []); // Tableau de dépendances vide pour ne l'exécuter qu'une seule fois au montage
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5001/api/roles/${id}`);
+
+            setRoles((prevRoles) => prevRoles.filter((role) => role.id !== id));
+        } catch (error) {
+            console.error("Erreur lors de la suppression du rôle : ", error);
+        }
+    };
 
     return (
         <div className="roleslist">
@@ -27,6 +38,7 @@ const RoleList = () => {
                         className="role-item"
                         style={{ borderColor: role.color, color: role.color }}>
                         {role.name}
+                        <button onClick={() => handleDelete(role.id)}>x</button>
                     </li>
                 ))}
             </ul>
