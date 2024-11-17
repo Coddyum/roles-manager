@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 import api from "../api";
 
-const RoleList = () => {
-    const [roles, setRoles] = useState([]);
-
-    const fetchRoles = async () => {
-        try {
-            const response = await api.get("/roles");
-            setRoles(response.data);
-        } catch (error) {
-            console.error("Error fetching roles:", error.response.data);
-        }
-    };
-
-    useEffect(() => {
-        fetchRoles();
-    }, []); // Tableau de dépendances vide pour ne l'exécuter qu'une seule fois au montage
-
+const RoleList = ({ roles, setRoles }) => {
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:5001/api/roles/${id}`);
 
+            // Mise à jour des rôles après suppression
             setRoles((prevRoles) => prevRoles.filter((role) => role.id !== id));
         } catch (error) {
             console.error("Erreur lors de la suppression du rôle : ", error);
@@ -38,7 +24,11 @@ const RoleList = () => {
                         className="role-item"
                         style={{ borderColor: role.color, color: role.color }}>
                         {role.name}
-                        <button onClick={() => handleDelete(role.id)}>x</button>
+                        <button
+                            className="rmRole"
+                            onClick={() => handleDelete(role.id)}>
+                            x
+                        </button>
                     </li>
                 ))}
             </ul>

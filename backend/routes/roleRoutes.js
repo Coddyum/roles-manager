@@ -4,6 +4,7 @@ const db = require("../database");
 
 // Route POST : Ajouter un nouveau rôle
 router.post("/", (req, res) => {
+    console.log(req.body);
     const { name, color } = req.body;
     if (!name || !color) {
         return res.status(400).json({ error: "Name and color are required" });
