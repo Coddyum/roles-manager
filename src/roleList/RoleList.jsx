@@ -1,19 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const RoleList = ({ roles, setRoles }) => {
+const RoleList = () => {
     return (
         <div className="roleslist">
             <h2>Liste des rôles</h2>
             <ul>
-                {roles.map((role) => (
-                    <li
-                        key={role.id}
-                        className="role-item"
-                        style={{ borderColor: role.color, color: role.color }}>
-                        {role.name}
-                        <button className="rmRole">x</button>
-                    </li>
-                ))}
+                <li className="role-item">
+                    <button className="rmRole">x</button>
+                </li>
             </ul>
         </div>
     );

@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
 import RoleList from "../roleList/RoleList";
-import api from "../api";
 
 export default function CreateNewRole() {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    };
+
     return (
         <>
             <div className="newRole">
                 <h2>Create New Role</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="formInput">
                         <input type="text" required placeholder="Role Name" />
                         <input type="color" required />
@@ -16,7 +18,6 @@ export default function CreateNewRole() {
                 </form>
             </div>
 
-            {/* Passer roles et setRoles à RoleList */}
             <RoleList />
         </>
     );
